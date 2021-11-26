@@ -1,9 +1,8 @@
 package me.brunosantana.builder;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -13,7 +12,8 @@ class Person {
 
     private String name;
     private String city;
-    private String job;
+    @Singular
+    private List<String> jobs;
 
 }
 
@@ -25,6 +25,7 @@ public class BuilderExample1 {
                 .name("Adam Savage")
                 .city("San Francisco")
                 .job("Developer")
+                .job("Driver")
                 .build();
 
         System.out.println(person);
