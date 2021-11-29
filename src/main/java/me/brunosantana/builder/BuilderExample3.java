@@ -13,7 +13,7 @@ class Person3 {
 
     private String name;
     private String city;
-    private List<String> jobs = new ArrayList<>();;
+    private List<String> jobs = new ArrayList<>();
 
     @Builder
     public Person3(String name, String city, List<String> jobs) {
